@@ -1,5 +1,9 @@
 # WEB2-N1
 
+## A senha de login permanece o padrão 
+Usuario: admin 
+Senha: admin
+
 ## Projeto de Eventos
 
 Este é um projeto de eventos que é composto por frontend e backend desenvolvido em HTML/CSS e Java Spring Boot.
