@@ -15,17 +15,17 @@ Para executar este projeto, você precisará iniciar um banco de dados MySQL e e
 ```sql
 CREATE USER 'eron'@localhost IDENTIFIED BY 'eron' ;
 
-CREATE DATABASE eventos ;
+CREATE DATABASE evento ;
 
-GRANT ALL ON eventos.* TO 'eron' @localhost
+GRANT ALL ON evento.* TO 'eron' @localhost
 
     WITH GRANT OPTION ;
     
 FLUSH PRIVILEGES ;
 
-use eventos ;
+use evento ;
 
-create table eventos (
+create table evento (
 
 id bigint not null auto_increment ,
 
