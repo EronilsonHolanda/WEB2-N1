@@ -42,9 +42,9 @@ public class EventoController {
         return "redirect:/eventos";
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping
     @Transactional
-    public String deletarEvento(@PathVariable Long id){
+    public String deletarEvento(Long id){
         repository.deleteById(id);
         return "redirect:/eventos";
     }
