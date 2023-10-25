@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<link rel="stylesheet" type="text/css" href="/css/style.css">
-
 <head>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <title>Lista de Eventos</title>
 </head>
+
 <body>
     <h1>Lista de Eventos</h1>
-    <table align="center">
+    <table>
         <thead>
             <tr>
                 <th>ID</th>
@@ -30,16 +32,18 @@
                     <form action="\eventos" method="post">
                         <input type="hidden" name="_method" value="delete">
                         <input type="hidden" name="id" th:value="${evento.getId}">
-                        <input type="submit" value="Deletar">
-                    </form>
-                    <button class="editar">
-                    <a th:href="@{/eventos/formulario?id={id}(id=${evento.getId()})}">Editar</a>
-                </button>
-            </tr>
+                        <button class="deletebutton" type="submit">
+                            <i class="bx bxs-trash"></i>
+                        </button>
+                    </form> 
+                    <a th:href="@{/eventos/formulario?id={id}(id=${evento.getId()})}">
+                        <i class='bx bxs-edit'></i>
+                    </a>
+                </tr>
         </tbody>
     </table>
-    <button>
-    <a href="/eventos/formulario">Criar Novo Evento</a>
-</button>
+    <button class="action">
+        <a href="/eventos/formulario">Criar Novo Evento</a>
+    </button>
 </body>
 </html>
