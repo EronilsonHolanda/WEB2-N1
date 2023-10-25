@@ -31,6 +31,7 @@ public class SecurityConfig {
         .build();
         return new InMemoryUserDetailsManager(admin);
     }
+    
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.csrf(AbstractHttpConfigurer::disable);
